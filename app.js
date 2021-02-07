@@ -1,15 +1,15 @@
-// fetch('https://www.themealdb.com/api/json/v1/1/random.php')
-//     .then(res => res.json())
-//     .then(data => displayMeals(data.meals));
+fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+    .then(res => res.json())
+    .then(data => displayMeals(data.meals));
 
-const apiBase = 'https://www.themealdb.com/api/json/v1/1/search.php?';
+// const apiBase = 'https://www.themealdb.com/api/json/v1/1/search.php?';
 
-const getMealsData = mealName => {
-    const url = `${apiBase}?s=${mealName}`;
-    fetch(url)
-        .then(res => res.json())
-        .then(data => displayMeals(data.meals))
-}
+// const getMealsData = mealName => {
+//     const url = `${apiBase}?s=${mealName}`;
+//     fetch(url)
+//         .then(res => res.json())
+//         .then(data => displayMeals(data.meals))
+// }
 
 const displayMeals = meals => {
     const mealsDiv = document.getElementById('mealList');
