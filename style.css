@@ -29,13 +29,13 @@ body {
 #mealsContainer img {
     width: 230px;
     border: 2px solid grey;
-    border-radius: 30px;
+    border-radius: 25px;
 
 }
 #mealDetails img {
-    width: 230px;
+    width: 300px;
     border: 2px solid grey;
-    border-radius: 30px;
+    border-radius: 20px;
 
 }
 

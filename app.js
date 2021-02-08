@@ -20,7 +20,7 @@ const displayMeals = meals => {
         const mealDiv = document.createElement('div');
         mealDiv.innerHTML = `
         <div>
-            <img src="${meal.strMealThumb}" alt="" onclick="getMealDetails()">
+            <img src="${meal.strMealThumb}" alt="" onclick="getMealDetails('${meal.strMeal}')">
             <h4 class="meal-name">${meal.strMeal}</h4>
         </div>
    
@@ -31,9 +31,8 @@ const displayMeals = meals => {
 }
 
 // Meal Details API Link creating
-const getMealDetails = async () => {
-    const url = `https://www.themealdb.com/api/json/v1/1/random.php/`
-
+const getMealDetails = async (name) => {
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`
     try {
         const res = await fetch(url);
         const data = await res.json();
@@ -61,11 +60,7 @@ const createMeal = (meal) => {
 		<div class="row">
 			<div class="columns five">
 				<img src="${meal.strMealThumb}" alt="Meal Image">
-				${
-					meal.strCategory
-						? `<p><strong>Category:</strong> ${meal.strCategory}</p>`
-						: ''
-				}
+                ${meal.strMeal ? `<p><strong>Meal Name:</strong> ${meal.strMeal}</p>` : ''}
 				${meal.strArea ? `<p><strong>Area:</strong> ${meal.strArea}</p>` : ''}
 				${
 					meal.strTags
