@@ -1,11 +1,61 @@
-.meal{
+body {
+    background: url(image/bgR-image-01.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.meal {
     border: 2px solid greenyellow;
     border-radius: 35px;
     padding: 20px;
     text-align: center;
 
 }
-.meal-name{
-    font-size: 45px;
-    color: indianred;
+
+.meal-name {
+    font-size: 30px;
+    color: #cc3b25;
+    text-align:left;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#mealList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#mealsContainer img {
+    width: 230px;
+    border: 2px solid grey;
+    border-radius: 30px;
+
+}
+#mealDetails img {
+    width: 230px;
+    border: 2px solid grey;
+    border-radius: 30px;
+
+}
+
+/* =========== */
+img {
+	max-width: 100%;
+}
+
+p {
+	margin-bottom: 5px;
+}
+
+h3 {
+	margin: 0;
+}
+
+h5 {
+	margin: 10px 0;
+}
+
+li {
+	margin-bottom: 0;
 }
